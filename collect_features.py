@@ -207,9 +207,8 @@ def angle_features(coords, fingers_tips, base_joints):
 
     all_angle_features = []
 
-    for sample in coords:  # (21,3)
+    for sample in coords:
 
-        # строим вектора пальцев
         finger_vectors = []
 
         for tip, base in zip(fingers_tips, base_joints):
@@ -229,7 +228,6 @@ def angle_features(coords, fingers_tips, base_joints):
 
                 cos_sim = np.dot(v1, v2) / (norm1 * norm2 + 1e-8)
 
-                # угол (в радианах)
                 angle = np.arccos(np.clip(cos_sim, -1.0, 1.0))
 
                 angles.append(angle)
