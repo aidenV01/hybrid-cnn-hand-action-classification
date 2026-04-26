@@ -99,7 +99,7 @@ empty/
 
 ## Подход 2: CNN (только изображения)
 
-**Функция:** `def conv_2d_model()`
+**Функции:** `def build_model_conv2D()`, `def model_conv2D_eval(model, data)`
 
 **Архитектура:** Простая свёрточная сеть. Принимает изображения, многократно пропускает через свёртку и пулинг, затем flatten + dense слои.
 
@@ -125,7 +125,7 @@ empty/
 
 ## Подход 3: CNN + координаты (гибридная модель)
 
-**Функция:** `def conv2d_and_coords_model()`
+**Функция:** `def build_conv2d_and_coords_model()`, `def eval_conv2d_and_coords_model(model,data)`
 
 **Архитектура:** Модель в функциональном API Keras с двумя входами:
 - изображение (224×224) → свёрточная ветка
